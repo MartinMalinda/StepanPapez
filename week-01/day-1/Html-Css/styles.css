@@ -1,0 +1,58 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-image: url("./assets/beanstalk.png");
+}
+
+/* Navbar */
+
+nav {
+    background-color: #4c4444;
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+    color: white;
+    padding: 10px;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+nav img {
+    height: 70px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.web-name {
+    font-size: 50px;
+    margin-left: 20px;
+}
+
+.links {
+    display: flex;
+    align-items: center;
+
+}
+
+.links li a {
+    font-weight: bold;
+    color: white;
+    font-family: 'Ubuntu', sans-serif;
+    text-decoration-line: none;
+    padding: 10px;
+}
+
+.links li a:hover {
+    color: #ba4e0e;
+}
+
+.links ul{
+    list-style-type: none;
+    display: flex;
+    font-size: 24px;
+}
