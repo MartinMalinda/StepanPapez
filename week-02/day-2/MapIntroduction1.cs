@@ -9,7 +9,7 @@ namespace Reverse
         {
             // Create an empty map where the keys are integers and the values are characters
             Dictionary<int, char> map = new Dictionary<int, char>();
-            
+
             // Print out whether the map is empty or not
             if (map.Count == 0)
             {
@@ -56,10 +56,15 @@ namespace Reverse
 
             // Print whether there is an associated value with key 100 or not
 
-            
             char test100;
-            map.TryGetValue(100, out test100);
-            Console.WriteLine(test100);
+            if (map.TryGetValue(100, out test100))
+            {
+                Console.WriteLine("Value is " + test100);
+            }
+            else
+            {
+                Console.WriteLine("Couldn't find the value.");
+            }
 
             // Remove all the key-value pairs
             map.Clear();
