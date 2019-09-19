@@ -1,4 +1,4 @@
-using Avalonia;
+﻿using Avalonia;
 using Avalonia.Controls;
 using Avalonia.Markup.Xaml;
 using Avalonia.Media;
@@ -33,14 +33,24 @@ namespace DrawingApplication
                 Colors.Indigo,
                 Colors.Violet
             };
-           
+            /*
+            double size = 40;
+            double step = 0;
+            double distance = Height / 2 / colors.Count;
+            foreach (var color in colors)
+            {
+                DrawSquare(foxDraw, Height / 2 - step, color);
+                step += distance;
+            }
+            */
             double size = Height;
 
             for (int i = 0; i < colors.Count; i++)
             {
-                DrawSquare(foxDraw, size, colors[i]);
+                DrawSquare(foxDraw, size , colors[i]);
                 size -= Height / colors.Count;
             }
+            
         }
         public void DrawSquare(FoxDraw foxDraw, double size, Color color)
         {

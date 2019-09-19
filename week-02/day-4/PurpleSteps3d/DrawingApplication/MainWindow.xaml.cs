@@ -1,4 +1,4 @@
-using Avalonia;
+﻿using Avalonia;
 using Avalonia.Controls;
 using Avalonia.Markup.Xaml;
 using Avalonia.Media;
@@ -18,28 +18,18 @@ namespace DrawingApplication
             var canvas = this.Get<Canvas>("canvas");
             var foxDraw = new FoxDraw(canvas);
 
-            // Create a square drawing function that takes 3 parameters:
-            // The square size, and the fill color, foxDraw
-            // and draws a square of that size and color to the center of the canvas.
-            // Create a loop that fills the canvas with rainbow colored squares (red, orange, yellow, green, blue, indigo, violet).
+            // Reproduce this:
+            // [https://github.com/green-fox-academy/chama-cs-prg-syllabus/blob/master/workshop/drawing/assets/r4.png]
 
-            var colors = new List<Color>()
+            int constant = 10;
+            int distance = 0;
+            int size = constant;
+            foxDraw.SetFillColor(Colors.Violet);
+            for (int i = 0; i < 6; i++)
             {
-                Colors.Red,
-                Colors.Orange,
-                Colors.Yellow,
-                Colors.Green,
-                Colors.Blue,
-                Colors.Indigo,
-                Colors.Violet
-            };
-           
-            double size = Height;
-
-            for (int i = 0; i < colors.Count; i++)
-            {
-                DrawSquare(foxDraw, size, colors[i]);
-                size -= Height / colors.Count;
+                foxDraw.DrawRectangle(distance + size, distance + size, size, size);
+                size += constant;
+                distance += (constant * i);
             }
         }
         public void DrawSquare(FoxDraw foxDraw, double size, Color color)

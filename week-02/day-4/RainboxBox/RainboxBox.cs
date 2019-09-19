@@ -33,14 +33,14 @@ namespace DrawingApplication
                 Colors.Indigo,
                 Colors.Violet
             };
-           
             double size = Height;
 
             for (int i = 0; i < colors.Count; i++)
             {
-                DrawSquare(foxDraw, size, colors[i]);
+                DrawSquare(foxDraw, size , colors[i]);
                 size -= Height / colors.Count;
             }
+            
         }
         public void DrawSquare(FoxDraw foxDraw, double size, Color color)
         {
