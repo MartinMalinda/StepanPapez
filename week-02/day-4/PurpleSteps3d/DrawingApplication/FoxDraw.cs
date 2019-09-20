@@ -1,4 +1,4 @@
-﻿using Avalonia;
+using Avalonia;
 using Avalonia.Controls;
 using Avalonia.Controls.Shapes;
 using Avalonia.Media;
@@ -13,6 +13,8 @@ namespace GreenFox
         private SolidColorBrush LineColor { get; set; } = new SolidColorBrush(Colors.Black);
         private SolidColorBrush ShapeColor { get; set; } = new SolidColorBrush(Colors.DarkGreen);
 
+        private int StrokeThickness { get; set; } = 1;
+
         public FoxDraw(Canvas canvas)
         {
             Canvas = canvas;
@@ -21,6 +23,11 @@ namespace GreenFox
         public void SetBackgroundColor(Color color)
         {
             Canvas.Background = new SolidColorBrush(color);
+        }
+
+        public void SetStrokeThicknes(int thickness)
+        {
+            StrokeThickness = thickness;
         }
 
         public void SetStrokeColor(Color color)
@@ -38,6 +45,7 @@ namespace GreenFox
             var ellipse = new Ellipse()
             {
                 Stroke = LineColor,
+                StrokeThickness = StrokeThickness,
                 Fill = ShapeColor,
                 Width = width,
                 Height = height
@@ -52,6 +60,7 @@ namespace GreenFox
             var line = new Line()
             {
                 Stroke = LineColor,
+                StrokeThickness = StrokeThickness,
                 StartPoint = start,
                 EndPoint = end
             };
@@ -69,6 +78,7 @@ namespace GreenFox
             var polygon = new Polygon()
             {
                 Stroke = LineColor,
+                StrokeThickness = StrokeThickness,
                 Fill = ShapeColor,
                 Points = points.ToList()
             };
@@ -81,6 +91,7 @@ namespace GreenFox
             var rectangle = new Rectangle()
             {
                 Stroke = LineColor,
+                StrokeThickness = StrokeThickness,
                 Fill = ShapeColor,
                 Width = width,
                 Height = height
