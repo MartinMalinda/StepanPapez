@@ -18,7 +18,37 @@ namespace DrawingApplication
             var canvas = this.Get<Canvas>("canvas");
             var foxDraw = new FoxDraw(canvas);
 
-            DrawEnvelopeStar(foxDraw, 30);
+            Width = Height;
+            double numberOfTriangles = 21;
+            double sideOfTriangle = Width / numberOfTriangles;
+            double heightOfTriangle = (sideOfTriangle * System.Math.Sqrt(3)) / 2;
+
+            for (int i = 0; i <= numberOfTriangles; i++)
+            {
+                // == lines
+                foxDraw.DrawLine(0 + i * sideOfTriangle / 2, Height - i * heightOfTriangle, Width - i * sideOfTriangle / 2, Height - i * heightOfTriangle);
+                
+                // // lines
+                foxDraw.DrawLine(Width - i * sideOfTriangle, Height, Width - i *sideOfTriangle / 2 , Height - i * heightOfTriangle);
+
+                // \\ lines
+                foxDraw.DrawLine(0 + i * sideOfTriangle, Height, 0 + i * sideOfTriangle / 2, Height - i * heightOfTriangle);
+            }
+        }
+
+        public void DrawLinePlay(FoxDraw foxDraw, double lines)
+        {
+            double numberOfPoints = lines;
+            double distance = Height / numberOfPoints;
+            foxDraw.SetStrokeThicknes(2);
+
+            for (int i = 1; i < numberOfPoints; i++)
+            {
+                foxDraw.SetStrokeColor(Colors.MediumPurple);
+                foxDraw.DrawLine(distance * i, 0, Height, distance * i);
+                foxDraw.SetStrokeColor(Colors.LimeGreen);
+                foxDraw.DrawLine(0, distance * i, distance * i, Height);
+            }
         }
         public void DrawEnvelopeStar(FoxDraw foxDraw, double lines)
         {
