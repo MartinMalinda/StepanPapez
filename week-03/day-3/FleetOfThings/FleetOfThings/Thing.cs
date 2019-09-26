@@ -16,5 +16,13 @@ namespace FleetOfThings
         {
             completed = true;
         }
+        public bool IsCompleted()
+        {
+            return completed;
+        }
+        public string GetName()
+        {
+            return name;
+        }
     }
 }
