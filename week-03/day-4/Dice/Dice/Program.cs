@@ -14,14 +14,19 @@ namespace DiceSet
             // Your task is to roll the dice until all of the dice are 6
             DiceSet diceSet = new DiceSet();
 
-            Console.WriteLine(diceSet.GetCurrent());
             diceSet.Roll();
-            Console.WriteLine(diceSet.GetCurrent());
-            Console.WriteLine(diceSet.GetCurrent(5));
-            diceSet.Reroll();
-            Console.WriteLine(diceSet.GetCurrent());
-            diceSet.Reroll(4);
-            Console.WriteLine(diceSet.GetCurrent());
+
+            foreach (var item in diceSet)
+            {
+                Console.WriteLine(diceSet.GetCurrent());
+            }
+
+            // Console.WriteLine(diceSet.GetCurrent());
+            // Console.WriteLine(diceSet.GetCurrent(5));
+            // diceSet.Reroll();
+            // Console.WriteLine(diceSet.GetCurrent());
+            // diceSet.Reroll(4);
+            // Console.WriteLine(diceSet.GetCurrent());
         }
     }
 }

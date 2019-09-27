@@ -6,7 +6,7 @@ namespace DiceSet
     {
         private Random randomValue = new Random();
         private int[] dice = new int[6];
-
+        
         public int[] Roll()
         {
             for (int i = 0; i < dice.Length; i++)
