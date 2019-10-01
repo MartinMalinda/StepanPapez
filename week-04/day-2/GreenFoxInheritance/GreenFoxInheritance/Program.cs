@@ -76,7 +76,9 @@ namespace GreenFoxInheritance
             // Cohort(name) : beside the given parameter, it sets students and mentors as empty lists
 
             var person = new Person();
-            Console.WriteLine(person.gender);
+
+            var student = new Student();
+            //Console.WriteLine(student.Name);
 
         }
     }

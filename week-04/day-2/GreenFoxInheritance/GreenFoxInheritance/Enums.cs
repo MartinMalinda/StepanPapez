@@ -7,6 +7,13 @@ namespace GreenFoxInheritance
     public enum Gender
     {
         male,
-        female,
+        female
+    }
+
+    public enum Level
+    {
+        junior,
+        intermediate,
+        senior
     }
 }
