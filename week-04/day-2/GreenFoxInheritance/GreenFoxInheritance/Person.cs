@@ -10,12 +10,15 @@ namespace GreenFoxInheritance
         // private int age = 30;
         // private Gender gender = Gender.female;
 
-        public string Name{ get; set; } = "Jane Doe";
-        public int Age { get; set; } = 30;
-        public Gender Gender { get; set; } = Gender.female;
+        public string Name{ get; private set; }
+        public int Age { get; private set; }
+        public Gender Gender { get; private set; }
 
         public Person()
         {
+            this.Name = "Jane Doe";
+            this.Age = 30;
+            this.Gender = Gender.female;
         }
 
         public Person(string name , int age, Gender gender)

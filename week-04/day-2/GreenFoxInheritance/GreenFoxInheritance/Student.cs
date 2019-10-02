@@ -6,11 +6,13 @@ namespace GreenFoxInheritance
 {
     class Student : Person
     {
-        public string PreviousOrganization { get; set; } = "The School of Life";
-        public int SkippedDays { get; set; } = 0;
+        public string PreviousOrganization { get; private set; }
+        public int SkippedDays { get; private set; }
 
         public Student()
         {
+            this.PreviousOrganization = "The School of Life";
+            this.SkippedDays = 0;
         }
 
         public Student(string name, int age, Gender gender, string previousOrganization) : base(name, age, gender)
