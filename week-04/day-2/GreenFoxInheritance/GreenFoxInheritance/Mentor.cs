@@ -6,7 +6,7 @@ namespace GreenFoxInheritance
 {
     class Mentor : Person
     {
-        public Level Level { get; private set; }
+        public Level Level { get; set; }
 
         public Mentor()
         {

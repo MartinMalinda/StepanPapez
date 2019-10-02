@@ -6,8 +6,8 @@ namespace GreenFoxInheritance
 {
     class Sponsor : Person
     {
-        public string Company { get; private set; }
-        public int HiredStudents { get; private set; }
+        public string Company { get; set; }
+        public int HiredStudents { get; set; }
 
         public Sponsor()
         {

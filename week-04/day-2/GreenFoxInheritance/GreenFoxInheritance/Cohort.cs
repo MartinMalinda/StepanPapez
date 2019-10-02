@@ -6,13 +6,15 @@ namespace GreenFoxInheritance
 {
     class Cohort
     {
-        public string Name { get; private set; }
-        public List<Student> Students { get; private set; }
-        public List<Mentor> Mentors { get; private set; }
+        public string Name { get; set; }
+        public List<Student> Students { get; set; }
+        public List<Mentor> Mentors { get; set; }
 
         public Cohort(string name)
         {
             this.Name = name;
+            this.Students = new List<Student>();
+            this.Mentors = new List<Mentor>();
         }
 
         public void AddStudent(Student student)

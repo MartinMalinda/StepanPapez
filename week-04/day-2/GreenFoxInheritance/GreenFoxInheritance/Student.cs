@@ -6,8 +6,8 @@ namespace GreenFoxInheritance
 {
     class Student : Person
     {
-        public string PreviousOrganization { get; private set; }
-        public int SkippedDays { get; private set; }
+        public string PreviousOrganization { get; set; }
+        public int SkippedDays { get; set; }
 
         public Student()
         {
@@ -18,6 +18,7 @@ namespace GreenFoxInheritance
         public Student(string name, int age, Gender gender, string previousOrganization) : base(name, age, gender)
         {
             this.PreviousOrganization = previousOrganization;
+            this.SkippedDays = 0;
         }
 
         public override void GetGoal()
