@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace GreenFoxInheritance
+namespace GFInheritance
 {
-    class Student : Person
+    class Student : Person, ICloneable
     {
         public string PreviousOrganization { get; set; }
         public int SkippedDays { get; set; }
@@ -34,6 +34,11 @@ namespace GreenFoxInheritance
         public void SkipDays(int numberOfDays)
         {
             this.SkippedDays += numberOfDays;
+        }
+
+        public object Clone()
+        {
+            return new Student(Name, Age, Gender, PreviousOrganization);
         }
     }
 }

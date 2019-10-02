@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace GreenFoxInheritance
+namespace GFInheritance
 {
     class Program
     {
@@ -77,7 +77,7 @@ namespace GreenFoxInheritance
             // Cohort(name) : beside the given parameter, it sets students and mentors as empty lists
 
             var people = new List<Person>();
-            
+
             var mark = new Person("Mark", 46, Gender.male);
             people.Add(mark);
             var jane = new Person();
@@ -94,25 +94,25 @@ namespace GreenFoxInheritance
             people.Add(sponsor);
             var elon = new Sponsor("Elon Musk", 46, Gender.male, "SpaceX");
             people.Add(elon);
-            
+
             student.SkipDays(3);
-            
+
             for (int i = 0; i < 5; i++)
             {
                 elon.Hire();
             }
-            
+
             for (int i = 0; i < 3; i++)
             {
                 sponsor.Hire();
             }
-            
+
             foreach (var person in people)
             {
                 person.Introduce();
                 person.GetGoal();
             }
-            
+
             Cohort awesome = new Cohort("AWESOME");
             awesome.AddStudent(student);
             awesome.AddStudent(john);
@@ -120,7 +120,7 @@ namespace GreenFoxInheritance
             awesome.AddMentor(gandhi);
             awesome.Info();
 
-
+            var johnTheCLone = john.Clone() as Student;
         }
     }
 }

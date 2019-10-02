@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace GreenFoxInheritance
+namespace GFInheritance
 {
     class Person
     {
@@ -10,7 +10,7 @@ namespace GreenFoxInheritance
         // private int age = 30;
         // private Gender gender = Gender.female;
 
-        public string Name{ get; set; }
+        public string Name { get; set; }
         public int Age { get; set; }
         public Gender Gender { get; set; }
 
@@ -21,7 +21,7 @@ namespace GreenFoxInheritance
             this.Gender = Gender.female;
         }
 
-        public Person(string name , int age, Gender gender)
+        public Person(string name, int age, Gender gender)
         {
             this.Name = name;
             this.Age = age;
