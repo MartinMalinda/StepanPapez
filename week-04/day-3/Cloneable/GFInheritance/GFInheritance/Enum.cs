@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace GreenFoxInheritance
+namespace GFInheritance
 {
     public enum Gender
     {
