@@ -28,7 +28,7 @@ namespace GreenFoxInheritance
 
         public override void GetGoal()
         {
-            Console.WriteLine("Hire brilliant junior software developers.");
+            Console.WriteLine("My goal is: Hire brilliant junior software developers.");
         }
 
         public void Hire()
