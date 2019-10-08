@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29306.81
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CountLines", "CountLines\CountLines.csproj", "{F95D407D-047B-47FD-92FA-5BD495BD0880}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F95D407D-047B-47FD-92FA-5BD495BD0880}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F95D407D-047B-47FD-92FA-5BD495BD0880}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F95D407D-047B-47FD-92FA-5BD495BD0880}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F95D407D-047B-47FD-92FA-5BD495BD0880}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {CE9B6939-8A96-4D4D-83FB-035B14153331}
+	EndGlobalSection
+EndGlobal
