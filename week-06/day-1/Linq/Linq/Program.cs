@@ -23,6 +23,8 @@ namespace Linq
             numbers.Where(n => n % 2 == 0).ToList().ForEach(n => Console.WriteLine(n));
 
             // Exercise 2: Write a LINQ Expression to get the average value of the odd numbers:
+            // int[] numbers = { 1, 3, -2, -4, -7, -3, -8, 12, 19, 6, 9, 10, 14 };
+
             var averageOfOddNumbers = numbers.Where(n => n % 2 != 0).Average();
 
             // query syntax
@@ -32,6 +34,8 @@ namespace Linq
                                         .Average();
 
             // Exercise 3: Write a LINQ Expression to get the squared value of the positive numbers:
+            // int[] numbers = { 1, 3, -2, -4, -7, -3, -8, 12, 19, 6, 9, 10, 14 };
+
             var sumOfPositiveNumbers = numbers.Where(n => n > 0).Sum();
             var sumOfPositiveNumbersSquared = sumOfPositiveNumbers * sumOfPositiveNumbers;
 
@@ -70,9 +74,14 @@ namespace Linq
             // Exercise 7: Write a LINQ Expression to find the strings which starts with A and ends with I in the following array:
             string[] cities = { "ROME", "LONDON", "NAIROBI", "CALIFORNIA", "ZURICH", "NEW DELHI", "AMSTERDAM", "ABU DHABI", "PARIS" };
 
+            var citiesWithConditions = cities.Where(c => c.StartsWith('A') && c.EndsWith('I'));
+
             // Exercise 8: Write a LINQ Expression to find the uppercase characters in a string.
+            // var stringInput = "Lorem ipsum dolor sit amet, consectetuer adipiscing elit.";
+            var uppercaseChars = stringInput.Where(c => Char.IsUpper(c));
 
             // Exercise 9: Write a LINQ Expression to convert a char array to a string.
+            string stringOutput = string.Join("", chars.Select(c => c.ToString()));
 
             // Exercise 10: Create a Fox class with 3 properties: name, type and color.
             // Fill a list with at least 5 foxes, it's up to you how you name/create them.
