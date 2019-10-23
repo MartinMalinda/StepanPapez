@@ -10,7 +10,7 @@ namespace ASP.NETApp.Controllers
     [Route("api")]
     public class RestController : Controller
     {
-        Greeting greetOne = new Greeting( 1, "Hello World" );
+        Greeting greetOne = new Greeting( 1, "Hello, " );
         public IActionResult Index()
         {
             return View();
@@ -21,6 +21,7 @@ namespace ASP.NETApp.Controllers
         [HttpGet("greeting")]
         public Greeting Greet()
         {
+            greetOne.Content += Request.Query["name"];
             return greetOne;
         }
     }
