@@ -10,19 +10,23 @@ namespace ASP.NETApp.Controllers
     [Route("api")]
     public class RestController : Controller
     {
-        Greeting greetOne = new Greeting( 1, "Hello, " );
         public IActionResult Index()
         {
             return View();
         }
 
-        // [Route("greeting")]
-        // [HttpGet]
-        [HttpGet("greeting")]
-        public Greeting Greet()
+        [Route("greeting")]
+        [HttpGet]
+        // Note that this could be replaced with just a single[HttpGet("greeting")] attribute.
+        public Greeting Greet(string name)
         {
-            greetOne.Content += Request.Query["name"];
-            return greetOne;
+            // var greeting = new Greeting();
+            // greeting.Content = Request.Query["Hello, world!"];
+            // greeting.Id = Convert.ToInt64(Request.Query["id"]);
+            // return greeting;
+
+            Models.Greeting.CallCount++;
+            return new Greeting(Greeting.CallCount, $"Hello, {name}!");
         }
     }
 }

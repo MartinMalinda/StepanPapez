@@ -9,6 +9,20 @@ namespace ASP.NETApp.Models
     {
         public long Id { get; set; }
         public string Content { get; set; }
+        public static long CallCount { get; set; } = 0;
+
+        public Greeting()
+        {
+            Id = 1;
+            Content = "Hello World!";
+        }
+
+        //public Greeting(string name)
+        //{
+        //    Id = CallCount;
+        //    Content = name;
+        //}
+
         public Greeting(long id, string content)
         {
             Id = id;
