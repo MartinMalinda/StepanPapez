@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>My Webshop</title>
+    <link rel="stylesheet" href="./styles.css" as="style">
+</head>
+
+<body>
+    <header>
+        <h1>My Shop</h1>
+        <nav>
+            <ul>
+            <li><a href="./onlyAvailable">ONLY AVAILABLE</a></li>
+            <li><a href="./cheapestFirst">CHEAPEST FIRST</a></li>
+            <li><a href="./containsNike">CONTAINS NIKE</a></li>
+            <li><a href="./averageStock">AVERAGE STOCK</a></li>
+            <li><a href="./mostExpensiveAvailable">MOST EXPENSIVE AVAILABLE</a></li>
+            </ul>
+        </nav>
+
+        <div>
+            <form action="/search">
+                <div>
+                    <label for="search">Search for:</label>
+                </div>
+                <div class="search-bar">
+                    <input type="search" id="search" name="search" placeholder="...something like nike" minlength="3">
+                    <button>Search</button>
+                </div>
+            </form>
+        </div>
+    </header>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Description</th>
+                <th>Price</th>
+                <th>Quantity of stock</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Running Shoes</td>
+                <td>Nike running shoes for every day sport</td>
+                <td>1000.0 CZK</td>
+                <td>5</td>
+            </tr>
+            <tr>
+                <td>Printer</td>
+                <td>Some HP Printer that will print pages</td>
+                <td>3000.0 CZK</td>
+                <td>2</td>
+            </tr>
+            <tr>
+                <td>Coca cola</td>
+                <td>0.5l standard coke</td>
+                <td>25.0 CZK</td>
+                <td>0</td>
+            </tr>
+            <tr>
+                <td>Wokin</td>
+                <td>Chicken with fried rice and WOKIN sauce</td>
+                <td>119.0 CZK</td>
+                <td>100</td>
+            </tr>
+            <tr>
+                <td>T-shirt</td>
+                <td>Blue with a corgi on a bike</td>
+                <td>300.0 CZK</td>
+                <td>1</td>
+            </tr>
+        </tbody>
+    </table>
+    
+</body>
+</html>
