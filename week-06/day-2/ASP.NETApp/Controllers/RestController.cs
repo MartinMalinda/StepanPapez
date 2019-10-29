@@ -20,7 +20,7 @@ namespace ASP.NETApp.Controllers
         // Note that this could be replaced with just a single[HttpGet("greeting")] attribute.
         public Greeting Greet(string name)
         {
-            return new Greeting(++Greeting.CallCount, $"Hello, {name}!");
+            return new Greeting($"Hello, {name}!");
         }
     }
 }

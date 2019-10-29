@@ -13,24 +13,36 @@ namespace ASP.NETApp.Models
                 "Sa-wat-dee", "Merhaba", "Selam", "Vitayu", "Xin chào", "Hylo", "Sut Mae", "Sholem Aleychem", "Sawubona"};
         public long Id { get; set; }
         public string Content { get; set; }
-        public static long CallCount { get; set; }
+        private static long callCount;
+        public long CallCount
+        {
+            get
+            {
+                return callCount;
+            }
+        }
 
         public Greeting()
         {
-            Id = 1;
+            callCount++;
+            Id = callCount;
             Content = "Hello World!";
         }
 
-        //public Greeting(string name)
-        //{
-        //    Id = CallCount;
-        //    Content = name;
-        //}
-
-        public Greeting(long id, string content)
+        public Greeting(string name)
         {
-            Id = id;
-            Content = content;
+            callCount++;
+            Id = CallCount;
+            Content = name;
         }
+
+        //public Greeting(long id, string content)
+        //{
+        //    //Id = id;
+        //    //Content = content;
+        //    callCount++;
+        //    Id = callCount;
+        //    Content = content;
+        // }
     }
 }

@@ -18,7 +18,7 @@ namespace ASP.NETApp.Controllers
         [HttpGet("greeting")]
         public IActionResult Greeting(string name)
         {
-            var greeting = new Greeting(++Models.Greeting.CallCount, name);
+            var greeting = new Greeting(name);
 
             return View(greeting);
         }

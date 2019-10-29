@@ -27,6 +27,7 @@ namespace ASP.NETApp
             }
 
             app.UseMvc();
+            app.UseStaticFiles();
 
             app.Run(async (context) =>
             {
