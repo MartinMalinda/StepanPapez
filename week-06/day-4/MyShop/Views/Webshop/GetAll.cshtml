@@ -1,0 +1,57 @@
+﻿
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <link rel="stylesheet" href="~/styles.css" />
+</head>
+<body>
+    <header>
+        <h1>My Shop</h1>
+        <nav>
+            <ul>
+                <li><a href="~/webshop/only-available">ONLY AVAILABLE</a></li>
+                <li><a href="~/webshop/cheapest-first">CHEAPEST FIRST</a></li>
+                <li><a href="~/webshop/contains-nike">CONTAINS NIKE</a></li>
+                <li><a href="~/webshop/average-stock">AVERAGE STOCK</a></li>
+                <li><a href="~/webshop/most-expensive-available">MOST EXPENSIVE AVAILABLE</a></li>
+            </ul>
+        </nav>
+
+        <div>
+            <form action="/search">
+                <div>
+                    <label for="search">Search for:</label>
+                </div>
+                <div class="search-bar">
+                    <input type="search" id="search" name="search" placeholder="...something like nike" minlength="3">
+                    <button>Search</button>
+                </div>
+            </form>
+        </div>
+    </header>
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Description</th>
+                <th>Price</th>
+                <th>Quantity of stock</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.Name</td>
+                    <td>@item.Description</td>
+                    <td>@item.Price CZK</td>
+                    <td>@item.Quantity</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</body>
+</html>
