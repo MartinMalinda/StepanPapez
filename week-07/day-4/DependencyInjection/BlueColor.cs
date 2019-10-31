@@ -8,9 +8,16 @@ namespace DependencyInjection
 {
     public class BlueColor : IColor
     {
+        private Printer printer;
+
+        public BlueColor(Printer printer)
+        {
+            this.printer = printer;
+        }
+
         public void PrintColor()
         {
-            Console.WriteLine("It is blue in color...");
+            printer.Log("It is blue in color...");
         }
     }
 }
