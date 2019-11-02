@@ -1,0 +1,101 @@
+body {
+    padding: 0 3%;
+    font-family: Calibri, 'Trebuchet MS', sans-serif;
+}
+
+
+h1 {
+    color: rgb(1, 188, 212);
+    border-bottom: 2px solid rgb(1, 188, 212);
+    font-size: 50px;
+}
+
+ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    padding-inline-start: 0;
+}
+
+a {
+    display: inline-block;
+    padding: 7px;
+    background-color: red;
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 7px;
+    font-size: 20px;
+}
+
+header {
+    padding-bottom: 30px;
+}
+
+label {
+    color: salmon;
+    font-size: 20px;
+}
+
+input {
+    font-size: 25px;
+    padding-left: 10px;
+    height: 50px;
+    width: 100%;
+    border: 1px solid #D6D9DC;
+    border-radius: 7px;
+}
+
+form button {
+    margin-left: 20px;
+    padding: 10px;
+    width: 150px;
+    background-color: red;
+    color: white;
+    border-radius: 10px;
+    border: none;
+    font-size: 25px;
+}
+
+input:focus {
+    outline: none;
+    border: 1px solid rgb(1, 188, 212);
+}
+
+input:invalid {
+    outline: none;
+    border: 2px solid red;
+}
+
+table {
+    width: 100%;
+}
+
+th {
+    font-size: 25px;
+    text-align: center;
+    background-color: skyblue;
+    padding-left: 10px;
+}
+
+tr {
+    height: 60px;
+}
+
+tbody td {
+    font-size: 25px;
+    padding-left: 10px;
+}
+
+tbody tr:nth-child(even) {
+    background-color: whitesmoke;
+}
+
+tbody td:nth-child(3), tbody td:nth-child(4)  {
+    text-align: right;
+    padding-left: 0;
+}
+
+.search-bar {
+    display: flex;
+}

@@ -2,12 +2,14 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using DependencyInjection.Interfaces;
+using DependencyInjection.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace ASP.NETApp
+namespace DependencyInjection
 {
     public class Startup
     {
@@ -16,6 +18,10 @@ namespace ASP.NETApp
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc();
+            services.AddTransient<ConsoleLoggerMiddleware>();
+            services.AddTransient<Printer>();
+            services.AddTransient<IColor, BlueColor>();
+            services.AddTransient<UtilityService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -27,7 +33,7 @@ namespace ASP.NETApp
             }
 
             app.UseMvc();
-            app.UseStaticFiles();
+            app.UseMiddleware<ConsoleLoggerMiddleware>();
 
             app.Run(async (context) =>
             {

@@ -7,7 +7,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace ASP.NETApp
+namespace MyShop
 {
     public class Startup
     {
@@ -31,7 +31,7 @@ namespace ASP.NETApp
 
             app.Run(async (context) =>
             {
-                await context.Response.WriteAsync("Hello World!");
+                await context.Response.WriteAsync("Default Greeting!");
             });
         }
     }
